@@ -1,10 +1,10 @@
+import { BsPersonFill } from 'react-icons/bs';
 import { FaPencil, FaRegImage } from 'react-icons/fa6';
 import { HiMiniCommandLine } from 'react-icons/hi2';
-import { BsPersonFill } from 'react-icons/bs';
 import { IoLogoGameControllerA } from 'react-icons/io';
 import { PiGridNine } from 'react-icons/pi';
-import Card from './Card.jsx';
 import SafeView from '../../components/SafeView.jsx';
+import Card from './Card.jsx';
 
 const CardsInfo = [
   {
@@ -42,10 +42,10 @@ const CardsInfo = [
 const AreaInteresse = () => {
   return (
     <SafeView id="interesse" classes="bg-[#EEEDEC] gap-x-5 py-8">
-      <h2 className="font-bold text-3xl md:text-5xl mb-4 pt-20">
+      <h2 className="font-bold text-3xl md:text-5xl mb-4 pt-4">
         <span className="text-main">ÁREAS DE</span> INTERESSE
       </h2>
-      <p className="text-justify text-md md:text-2xl pt-6">
+      <p className="text-justify text-md md:text-lg pt-6">
         {' '}
         Este espaço recorre à metodologia inter e transdisciplinar pois visa o
         trabalho construtivo, que se desenvolve a partir de várias áreas de
