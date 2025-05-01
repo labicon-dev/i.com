@@ -1,8 +1,20 @@
-import data from '../../assets/membros.json';
+import { useEffect, useState } from 'react';
 import SafeView from '../../components/safe-view.jsx';
+import { fetchMembers } from '../../lib/actions.js';
 import Membro from './Membro.jsx';
 
 const QuemSomos = () => {
+  const [members, setMembers] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const members = await fetchMembers();
+      setMembers(members);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <SafeView classes="px-20 py-10 flex flex-col bg-white" id="equipe">
       <h2 className="font-bold text-3xl md:text-5xl mb-4 pt-4">
@@ -18,14 +30,18 @@ const QuemSomos = () => {
         </span>
       </div>
       <div className="flex flex-wrap mt-10 gap-3 justify-center">
-        {data.members.map((membro) => (
-          <Membro
-            key={membro.name}
-            nome={membro.name}
-            cargo={membro.job}
-            foto={membro.image}
-          />
-        ))}
+        {members &&
+          members.map(
+            (member) =>
+              member.activeOnWebsite && (
+                <Membro
+                  key={member.id}
+                  nome={member.name}
+                  activity={member.activity}
+                  avatarUrl={member.avatarUrl}
+                />
+              ),
+          )}
       </div>
     </SafeView>
   );
