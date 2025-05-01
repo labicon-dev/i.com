@@ -1,0 +1,44 @@
+<svg viewBox="0 0 515.27 515.27" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    rect {
+      fill: black;
+    }
+    @media (prefers-color-scheme: dark) {
+      rect {
+        fill: white;
+      }
+    }
+  </style>
+
+    <rect x="75.63" y="75.99" width="7" height="364"/>
+    <rect x="100.63" y="75.99" width="7" height="364"/>
+    <rect x="125.63" y="75.99" width="8" height="364"/>
+    <rect x="151.63" y="75.99" width="7" height="364"/>
+    <rect x="177.63" y="75.99" width="7" height="364"/>
+    <rect x="202.63" y="75.99" width="8" height="364"/>
+    <rect x="228.63" y="75.99" width="7" height="364"/>
+    <rect x="254.63" y="75.99" width="7" height="364"/>
+    <rect x="279.63" y="75.99" width="7" height="364"/>
+    <rect x="304.63" y="75.99" width="8" height="364"/>
+    <rect x="330.63" y="75.99" width="7" height="364"/>
+    <rect x="355.63" y="75.99" width="7" height="364"/>
+    <rect x="381.63" y="75.99" width="7" height="364"/>
+    <rect x="406.63" y="75.99" width="7" height="364"/>
+    <rect x="432.63" y="75.99" width="7" height="364"/>
+    <rect x="-50.78" y="127.75" width="364.35" height="7.29" transform="translate(-54.42 131.39) rotate(-45)"/>
+    <rect x="-32.75" y="145.78" width="364.35" height="7.29" transform="translate(-61.89 149.43) rotate(-45)"/>
+    <rect x="-14.71" y="163.82" width="364.35" height="7.29" transform="translate(-69.36 167.46) rotate(-45)"/>
+    <rect x="3.32" y="181.85" width="364.35" height="7.29" transform="translate(-76.83 185.5) rotate(-45)"/>
+    <rect x="21.36" y="199.89" width="364.35" height="7.29" transform="translate(-84.3 203.53) rotate(-45)"/>
+    <rect x="39.39" y="217.92" width="364.35" height="7.29" transform="translate(-91.77 221.56) rotate(-45)"/>
+    <rect x="57.42" y="235.95" width="364.35" height="7.29" transform="translate(-99.24 239.6) rotate(-45)"/>
+    <rect x="75.46" y="253.99" width="364.35" height="7.29" transform="translate(-106.71 257.63) rotate(-45)"/>
+    <rect x="93.49" y="272.02" width="364.35" height="7.29" transform="translate(-114.18 275.67) rotate(-45)"/>
+    <rect x="111.53" y="290.06" width="364.35" height="7.29" transform="translate(-121.65 293.7) rotate(-45)"/>
+    <rect x="129.56" y="308.09" width="364.35" height="7.29" transform="translate(-129.13 311.74) rotate(-45)"/>
+    <rect x="147.6" y="326.13" width="364.35" height="7.29" transform="translate(-136.6 329.77) rotate(-45)"/>
+    <rect x="165.63" y="344.16" width="364.35" height="7.29" transform="translate(-144.07 347.8) rotate(-45)"/>
+    <rect x="183.66" y="362.19" width="364.35" height="7.29" transform="translate(-151.54 365.84) rotate(-45)"/>
+    <rect x="201.7" y="380.23" width="364.35" height="7.29" transform="translate(-159.01 383.87) rotate(-45)"/>
+
+</svg>
