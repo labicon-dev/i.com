@@ -5,7 +5,7 @@ const Index = () => {
     <section className="h-full flex items-center justify-center">
       <div
         id="home"
-        className="flex flex-col min-w-[80vw] max-w-5xl items-center justify-center gap-9 py-6 px-4 sm:px-10">
+        className="flex flex-col min-w-[80vw] max-w-5xl min-h-[90vh] max-h-[90vh] items-center justify-center gap-9 py-6 px-4 sm:px-10">
         <div className="text-3xl sm:text-4xl md:text-5xl xl:text-7xl text-main font-bold text-start">
           <p>
             <span className="text-white">Lab</span>oratorio de
