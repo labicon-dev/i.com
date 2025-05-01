@@ -1,5 +1,4 @@
 import { FaInstagram } from 'react-icons/fa';
-import IconLogo from '../../assets/images/logo-b.png';
 
 const content = [
   {
@@ -32,7 +31,11 @@ const Header = () => {
   return (
     <nav className="flex items-center justify-center py-6 px-12 text-xs min-w-[80vw] max-w-5xl">
       <div className="flex flex-row justify-center md:justify-between w-full">
-        <img src={IconLogo} alt="Logo do Laboratório ICON" className="flex" />
+        <img
+          src="https://cdn.icon.ufba.br/logo/full-large-white-transparent.png"
+          alt="Logo do Laboratório ICON"
+          className="h-20"
+        />
         <div className="hidden md:pl-8 md:flex md:text-white md:items-center md:justify-center md:font-medium md:gap-x-4">
           {content.map((item, index) => (
             <a
