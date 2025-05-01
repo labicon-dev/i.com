@@ -23,7 +23,7 @@ const About = () => {
         <p className="text-md text-slate-100 md:text-xl md:text-justify">
           Fundamentado em um tripé{' '}
           <span className="text-main font-semibold">
-            ARTE/ CIÊNCIA/ EDUCAÇÃO
+            ARTE - CIÊNCIA - EDUCAÇÃO
           </span>{' '}
           o espaço busca estabelecer parcerias com centros e pesquisadores
           nacionais e internacionais. Estas parcerias têm como função criar uma
@@ -37,30 +37,30 @@ const About = () => {
           <p className="text-md text-slate-100 md:text-xl">
             Sob este prisma, podemos ainda listar os seguintes objetivos:
           </p>
-          <ul className="text-md text-slate-100 md:text-xl md:text-justify">
-            <li>- Produzir e disseminar inovações tecnológicas;</li>
-            <li>- Acolher pesquisadores de programas de pós-graduação;</li>
+          <ul className="text-md text-start text-slate-100">
+            <li>- Produzir e disseminar inovações tecnológicas.</li>
+            <li>- Acolher pesquisadores de programas de pós-graduação.</li>
             <li>
               - Desenvolver projetos institucionais, interinstitucionais e
-              interlaboratoriais;
+              interlaboratoriais.
             </li>
             <li>
               - Estabelecer um diálogo com o mercado a fim de identificar as
-              demandas de novas tecnologias;
+              demandas de novas tecnologias.
             </li>
-            <li>- Oferecer cursos de extensão;</li>
-            <li>- Organizar e promover eventos científicos e artísticos;</li>
+            <li>- Oferecer cursos de extensão.</li>
+            <li>- Organizar e promover eventos científicos e artísticos.</li>
             <li>
               - Dar visibilidade para as pesquisas desenvolvidas através da
-              participação em congressos, simpósios e encontros;
+              participação em congressos, simpósios e encontros.
             </li>
             <li>
               - Disponibilizar o resultado das pesquisas através da publicação
-              de artigos, capítulos e livros;
+              de artigos, capítulos e livros.
             </li>
             <li>
               - Interagir com a comunidade artística e científica local para
-              desenvolvimento de projetos integradores
+              desenvolvimento de projetos integradores.
             </li>
           </ul>
         </div>
