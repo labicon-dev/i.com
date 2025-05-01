@@ -1,13 +1,13 @@
-import Membro from './Membro.jsx';
 import data from '../../assets/membros.json';
 import SafeView from '../../components/SafeView.jsx';
+import Membro from './Membro.jsx';
 
 const QuemSomos = () => {
   return (
     <SafeView classes="px-20 py-10 flex flex-col bg-white" id="equipe">
       <h2 className="text-main text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold">
         <span>
-          QUEM <span className="text-cinza">NÓS SOMOS?</span>{' '}
+          QUEM <span className="text-cinza">SOMOS NÓS?</span>{' '}
         </span>
       </h2>
       <div className="mt-10">
