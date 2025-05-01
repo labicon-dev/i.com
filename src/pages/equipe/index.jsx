@@ -5,8 +5,8 @@ import Membro from './Membro.jsx';
 const QuemSomos = () => {
   return (
     <SafeView classes="px-20 py-10 flex flex-col bg-white" id="equipe">
-      <h2 className="text-main text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold">
-        <span>
+      <h2 className="font-bold text-3xl md:text-5xl mb-4 pt-4">
+        <span className="text-main">
           QUEM <span className="text-cinza">SOMOS NÓS?</span>{' '}
         </span>
       </h2>
