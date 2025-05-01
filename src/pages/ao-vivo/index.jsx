@@ -1,5 +1,5 @@
 import Camera from './Camera.jsx';
-import SafeView from '../../components/SafeView.jsx';
+import SafeView from '../../components/safe-view.jsx';
 
 const AoVivo = () => {
   return (

@@ -1,6 +1,6 @@
+import SafeView from '../../components/safe-view.jsx';
 import EntreContato from './EmContato.jsx';
 import EnvieMensagem from './EnvieMensagem.jsx';
-import SafeView from '../../components/SafeView.jsx';
 
 const Contato = () => {
   return (

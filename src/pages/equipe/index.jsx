@@ -1,5 +1,5 @@
 import data from '../../assets/membros.json';
-import SafeView from '../../components/SafeView.jsx';
+import SafeView from '../../components/safe-view.jsx';
 import Membro from './Membro.jsx';
 
 const QuemSomos = () => {

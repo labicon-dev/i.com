@@ -3,7 +3,7 @@ import { FaPencil, FaRegImage } from 'react-icons/fa6';
 import { HiMiniCommandLine } from 'react-icons/hi2';
 import { IoLogoGameControllerA } from 'react-icons/io';
 import { PiGridNine } from 'react-icons/pi';
-import SafeView from '../../components/SafeView.jsx';
+import SafeView from '../../components/safe-view.jsx';
 import Card from './Card.jsx';
 
 const CardsInfo = [

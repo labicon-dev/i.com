@@ -1,12 +1,12 @@
 import './App.css';
 
-import Header from './pages/header';
-import Hero from './pages/hero';
 import About from './pages/about';
-import AoVivo from './pages/aoVivo';
+import AoVivo from './pages/ao-vivo';
+import AreaInteresse from './pages/areas-de-interesse';
 import Contato from './pages/contato';
 import QuemSomos from './pages/equipe';
-import AreaInteresse from './pages/areasInteresse';
+import Header from './pages/header';
+import Hero from './pages/hero';
 
 const App = () => {
   return (
