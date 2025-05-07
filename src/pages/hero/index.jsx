@@ -2,10 +2,13 @@ import { IoChevronDownCircleOutline } from 'react-icons/io5';
 
 const Index = () => {
   return (
-    <section className="h-full flex items-center justify-center">
+    <section className="h-full flex items-center justify-center relative">
+      <div className="absolute inset-0 z-0">
+        {/* <ReactP5Wrapper sketch={skecth} /> */}
+      </div>
       <div
         id="home"
-        className="flex flex-col min-w-[80vw] max-w-5xl min-h-[90vh] max-h-[90vh] items-center justify-center gap-9 py-6 px-4 sm:px-10">
+        className="flex flex-col min-w-[80vw] max-w-5xl min-h-[90vh] max-h-[90vh] items-center justify-center gap-9 py-6 px-4 sm:px-10 z-10 relative">
         <div className="text-3xl sm:text-4xl md:text-5xl xl:text-7xl text-main font-bold text-start">
           <p>
             <span className="text-white">Lab</span>oratorio de
