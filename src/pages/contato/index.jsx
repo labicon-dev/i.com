@@ -13,7 +13,7 @@ const Contato = () => {
       <SafeView id="contato" classes="bg-[#222629]">
         <EnvieMensagem />
       </SafeView>
-      <div className="bg-slate-100 flex flex-col justify-center items-center bg-[url(https://icon.ufba.br/img/top-waves.png)] bg-repeat-x bg-top py-16" />
+      <div className="bg-primary flex flex-col justify-center items-center bg-[url(https://icon.ufba.br/img/top-waves.png)] bg-repeat-x bg-top py-4" />
     </div>
   );
 };
