@@ -5,11 +5,22 @@ import Membro from './Membro.jsx';
 
 const QuemSomos = () => {
   const [members, setMembers] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
-      const members = await fetchMembers();
-      setMembers(members);
+      try {
+        setLoading(true);
+        setError(false);
+        const members = await fetchMembers();
+        setMembers(members);
+      } catch (err) {
+        console.error('Error loading members:', err);
+        setError(true);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchData();
@@ -29,20 +40,42 @@ const QuemSomos = () => {
           tecnologias.
         </span>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-10 justify-center items-center">
-        {members &&
-          members.map(
-            (member) =>
-              member.activeOnWebsite && (
-                <Membro
-                  key={member.id}
-                  nome={member.name}
-                  activity={member.activity}
-                  avatarUrl={member.avatarUrl}
-                />
-              ),
+
+      {loading && (
+        <div className="mt-10 text-center">
+          <p className="text-cinza">Carregando membros...</p>
+        </div>
+      )}
+
+      {error && (
+        <div className="mt-10 text-center">
+          <p className="text-red-500">
+            Erro ao carregar membros. Tente novamente mais tarde.
+          </p>
+        </div>
+      )}
+
+      {!loading && !error && (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-10 justify-center items-center">
+          {members && members.length > 0 ? (
+            members.map(
+              (member) =>
+                member.activeOnWebsite && (
+                  <Membro
+                    key={member.id}
+                    nome={member.name}
+                    activity={member.activity}
+                    avatarUrl={member.avatarUrl}
+                  />
+                ),
+            )
+          ) : (
+            <div className="col-span-full text-center">
+              <p className="text-cinza">Nenhum membro encontrado.</p>
+            </div>
           )}
-      </div>
+        </div>
+      )}
     </SafeView>
   );
 };

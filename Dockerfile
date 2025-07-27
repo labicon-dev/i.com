@@ -8,6 +8,8 @@ RUN npm install -g pnpm
 
 RUN pnpm install
 
+COPY .env* ./
+
 COPY . .
 
 RUN pnpm build

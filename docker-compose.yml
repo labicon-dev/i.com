@@ -9,5 +9,7 @@ services:
       - "4004:4004"
     environment:
       - PORT=4004
+      - VITE_API_URL=${VITE_API_URL}
+      - VITE_API_KEY=${VITE_API_KEY}
     volumes:
       - ./app:/app
