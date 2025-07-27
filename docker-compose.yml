@@ -4,5 +4,10 @@ services:
   website:
     image: labicon/website:latest
     container_name: website
-    restart: "no"
-    network_mode: host
+    restart: unless-stopped
+    ports:
+      - "4004:4004"
+    environment:
+      - PORT=4004
+    volumes:
+      - ./app:/app
