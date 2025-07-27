@@ -1,7 +1,8 @@
 export async function fetchMembers() {
-  // Check if environment variables are configured
   if (!import.meta.env.VITE_API_URL || !import.meta.env.VITE_API_KEY) {
-    console.warn('API environment variables not configured. Returning empty members array.');
+    console.warn(
+      'API environment variables not configured. Returning empty members array.',
+    );
     return [];
   }
 
