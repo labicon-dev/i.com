@@ -8,7 +8,7 @@ export default {
       colors: {
         main: '#FEC400',
         cinza: '#222629',
-        primary: '#1C1616',
+        primary: 'rgb(27, 22, 20)',
       },
       spacing: {
         hero: 'calc(100vh - 119px)',

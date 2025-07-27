@@ -6,26 +6,33 @@
 * @Ported to P5JS by Eduardo Monteiro
 */
 
-function skecth(p5) {
+function sketch(p5) {
   let MAX_UNITS;
   let units = [];
+  let w, h;
+
+  p5.updateWithProps = (props) => {
+    w = props.width;
+    h = props.height;
+  };
 
   p5.setup = () => {
-    p5.createCanvas(p5.windowWidth, p5.windowHeight, p5.WEBGL);
+    p5.createCanvas(w, h, p5.WEBGL);
     p5.strokeWeight(1);
     p5.stroke(100);
     p5.noFill();
 
     p5.frameRate(30);
-    p5.background(27, 22, 20);
+    // p5.background(27, 22, 20);
+    p5.background(255, 0, 0);
   };
 
   p5.draw = () => {
-    MAX_UNITS = p5.windowWidth / 10;
+    MAX_UNITS = w / 10;
 
     p5.fill(27, 22, 20, 50);
 
-    p5.rect(-1, -1, p5.width + 1, p5.height + 1);
+    p5.rect(-1, -1, w + 1, h + 1);
 
     updateUnits();
     renderUnits();
@@ -60,10 +67,7 @@ function skecth(p5) {
 
   class Unit {
     constructor() {
-      this.pos = p5.createVector(
-        p5.random(0, p5.width),
-        p5.random(0, p5.height),
-      );
+      this.pos = p5.createVector(p5.random(0, w), p5.random(0, h));
       this.speed = p5.createVector(0, p5.random(1) + 0.5);
       this.xoff = p5.random(10);
       this.yoff = p5.random(10);
@@ -77,17 +81,17 @@ function skecth(p5) {
       this.yoff += 0.01;
 
       let diff = p5.constructor.Vector.sub(this.pos.copy(), mouse);
-      if (diff.mag() < p5.width / 10.0) {
+      if (diff.mag() < w / 10.0) {
         let displace = p5.constructor.Vector.fromAngle(diff.heading());
-        displace.mult(p5.width / 200.0);
+        displace.mult(w / 200.0);
         this.pos.add(displace);
       }
 
       return (
-        this.pos.y > p5.height + 1 ||
+        this.pos.y > h + 1 ||
         this.pos.y < -1 ||
         this.pos.x < -1 ||
-        this.pos.x > p5.width + 1
+        this.pos.x > w + 1
       );
     }
 
@@ -97,4 +101,4 @@ function skecth(p5) {
   }
 }
 
-export default skecth;
+export default sketch;

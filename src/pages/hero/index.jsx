@@ -1,11 +1,12 @@
 import { IoChevronDownCircleOutline } from 'react-icons/io5';
+import { useP5Background } from '../../hooks/useP5Background';
 
 const Index = () => {
+  const canvasRef = useP5Background();
+
   return (
-    <section className="h-full flex items-center justify-center relative">
-      <div className="absolute inset-0 z-0">
-        {/* <ReactP5Wrapper sketch={skecth} /> */}
-      </div>
+    <section className="h-full w-full flex items-center justify-center relative">
+      <div ref={canvasRef} className="absolute inset-0 z-0" />
       <div
         id="home"
         className="flex flex-col min-w-[80vw] max-w-5xl min-h-[90vh] max-h-[90vh] items-center justify-center gap-9 py-6 px-4 sm:px-10 z-10 relative">

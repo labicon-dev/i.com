@@ -29,7 +29,7 @@ const QuemSomos = () => {
           tecnologias.
         </span>
       </div>
-      <div className="flex flex-wrap mt-10 gap-3 justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-10 justify-center items-center">
         {members &&
           members.map(
             (member) =>
