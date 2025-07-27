@@ -10,8 +10,8 @@ class Membro extends Component {
           <img
             className="p-0.5 object-cover size-full rounded-md"
             src={avatarUrl}
-            crossOrigin="use-credentials"
             alt={`Avatar de ${nome}`}
+            crossOrigin="use-credentials"
           />
         </div>
         <div className="my-3 text-center">
