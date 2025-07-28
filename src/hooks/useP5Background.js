@@ -85,7 +85,10 @@ export const useP5Background = () => {
       };
 
       function updateUnits() {
-        let mouse = p.createVector(p.mouseX, p.mouseY);
+        let mouse = p.createVector(
+          p.mouseX - p.width / 2,
+          p.mouseY - p.height / 2,
+        );
 
         for (let i = units.length - 1; i >= 0; i--) {
           if (units[i].update(mouse)) {
