@@ -1,5 +1,5 @@
-import { HiOutlineMail } from 'react-icons/hi';
 import { FaLocationDot } from 'react-icons/fa6';
+import { HiOutlineMail } from 'react-icons/hi';
 
 const EntreContato = () => {
   return (
@@ -18,7 +18,7 @@ const EntreContato = () => {
         <HiOutlineMail size={24} />
         <span className="text-lg">icon@ufba.br</span>
       </a>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center text-center">
         <FaLocationDot fill="white" size={28} className="mb-4" />
         <span className="text-slate-100">Universidade Federal da Bahia</span>
         <span className="text-slate-100">
