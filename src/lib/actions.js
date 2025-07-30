@@ -7,15 +7,12 @@ export async function fetchMembers() {
   }
 
   try {
-    const res = await fetch(
-      import.meta.env.VITE_API_URL + '/members/list_members',
-      {
-        method: 'GET',
-        headers: {
-          'X-API-KEY': import.meta.env.VITE_API_KEY,
-        },
+    const res = await fetch(import.meta.env.VITE_API_URL + '/members/all', {
+      method: 'GET',
+      headers: {
+        'X-API-KEY': import.meta.env.VITE_API_KEY,
       },
-    );
+    });
 
     if (!res.ok) {
       throw new Error(`API request failed: ${res.status}`);
