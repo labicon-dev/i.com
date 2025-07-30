@@ -11,7 +11,6 @@ class Membro extends Component {
             className="p-0.5 object-cover size-full rounded-md"
             src={avatarUrl}
             alt={`Avatar de ${nome}`}
-            crossOrigin="use-credentials"
           />
         </div>
         <div className="my-3 text-center">
