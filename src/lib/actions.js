@@ -7,7 +7,7 @@ export async function fetchMembers() {
   }
 
   try {
-    const res = await fetch(import.meta.env.VITE_API_URL + '/members/all', {
+    const res = await fetch(import.meta.env.VITE_API_URL + '/member/all', {
       method: 'GET',
       headers: {
         'X-API-KEY': import.meta.env.VITE_API_KEY,
