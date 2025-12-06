@@ -4,7 +4,7 @@ import { HiMiniCommandLine } from 'react-icons/hi2';
 import { IoLogoGameControllerA } from 'react-icons/io';
 import { PiGridNine } from 'react-icons/pi';
 import SafeView from '../../components/safe-view.jsx';
-import Card from './Card.jsx';
+import Card from './card.jsx';
 
 const CardsInfo = [
   {

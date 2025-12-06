@@ -1,5 +1,3 @@
-import './App.css';
-
 import About from './pages/about';
 import AoVivo from './pages/ao-vivo';
 import AreaInteresse from './pages/areas-de-interesse';

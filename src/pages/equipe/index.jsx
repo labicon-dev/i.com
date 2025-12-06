@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import SafeView from '../../components/safe-view.jsx';
 import { fetchMembers } from '../../lib/actions.js';
-import Membro from './Membro.jsx';
+import Membro from './membro.jsx';
 
 const QuemSomos = () => {
   const [members, setMembers] = useState([]);

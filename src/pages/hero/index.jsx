@@ -1,8 +1,40 @@
 import { IoChevronDownCircleOutline } from 'react-icons/io5';
 import { useP5Background } from '../../hooks/useP5Background';
 
+const HERO_CONTENT = {
+  title: [
+    { text: 'Lab', highlight: true },
+    { text: 'oratório de', highlight: false },
+    { text: 'I', highlight: true },
+    { text: 'nteratividade,', highlight: false },
+    { text: 'CO', highlight: true },
+    { text: 'mputação e', highlight: false },
+    { text: 'N', highlight: true },
+    { text: 'ovas Interfaces', highlight: false },
+  ],
+  description: {
+    prefix: 'Estamos voltados para a ',
+    highlight: 'pesquisa, desenvolvimento e inovação',
+    middle: ' em ',
+    emphasized: 'arte, ciência e tecnologia.',
+    suffix:
+      ' Focamos na aplicação de técnicas computacionais aplicadas, sobretudo, ao desenvolvimento de novas interfaces e sistemas interativos envolvendo Inteligência Artificial.',
+  },
+  callToAction: 'Saiba mais',
+};
+
 const Index = () => {
   const canvasRef = useP5Background();
+
+  const renderTitleLine = (startIndex, endIndex) => (
+    <p key={`title-line-${startIndex}`}>
+      {HERO_CONTENT.title.slice(startIndex, endIndex + 1).map((part, index) => (
+        <span key={index} className={part.highlight && 'text-white'}>
+          {part.text}
+        </span>
+      ))}
+    </p>
+  );
 
   return (
     <section className="h-full w-full flex items-center justify-center relative">
@@ -11,18 +43,10 @@ const Index = () => {
         id="home"
         className="flex flex-col min-w-[80vw] max-w-5xl min-h-[90vh] max-h-[90vh] items-center justify-center -translate-y-10 gap-9 py-6 px-4 sm:px-10 z-10 relative">
         <div className="text-3xl sm:text-4xl md:text-5xl xl:text-7xl text-main font-bold text-center">
-          <p>
-            <span className="text-white">Lab</span>oratorio de
-          </p>
-          <p>
-            <span className="text-white">I</span>nteratividade,
-          </p>
-          <p>
-            <span className="text-white">CO</span>mputação e
-          </p>
-          <p>
-            <span className="text-white">N</span>ovas Interfaces
-          </p>
+          {renderTitleLine(0, 1)}
+          {renderTitleLine(2, 3)}
+          {renderTitleLine(4, 5)}
+          {renderTitleLine(6, 7)}
         </div>
         <p className="text-white text-xl sm:text-2xl text-center">
           Estamos voltados para a{' '}

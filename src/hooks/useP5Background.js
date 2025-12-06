@@ -1,3 +1,11 @@
+/*
+* @Author = Francisco Barretto
+* @email = icon@ufba.br
+* @brief = Simple ICON frontpage interaction
+
+* @Ported to P5JS by Eduardo Monteiro
+*/
+
 import { useEffect, useRef } from 'react';
 
 export const useP5Background = () => {
