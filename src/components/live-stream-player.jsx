@@ -6,6 +6,8 @@ const LiveStreamPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const streamUrl = 'https://cdn.icon.ufba.br/stream/live/stream/index.m3u8';
+  const logoUrl =
+    'https://cdn.icon.ufba.br/logo/full-large-white-transparent.png';
 
   useEffect(() => {
     let hls;
@@ -55,40 +57,30 @@ const LiveStreamPlayer = () => {
   }, []);
 
   return (
-    <div
-      className="video-container"
-      style={{
-        position: 'relative',
-        width: '100%',
-        maxWidth: '800px',
-        background: '#000',
-      }}>
+    <div className="relative w-full max-w-4xl mx-auto aspect-[4/3] bg-black rounded-lg overflow-hidden shadow-2xl group font-sans">
       <video
         ref={videoRef}
-        controls
         muted
         playsInline
-        style={{ width: '100%', height: 'auto', display: 'block' }}
+        autoPlay
+        className="h-full"
         onPlay={() => setIsPlaying(true)}
       />
 
-      {isPlaying && (
-        <div
-          style={{
-            position: 'absolute',
-            top: '10px',
-            left: '10px',
-            background: 'red',
-            color: 'white',
-            padding: '2px 8px',
-            borderRadius: '4px',
-            fontSize: '12px',
-            fontWeight: 'bold',
-            pointerEvents: 'none',
-          }}>
-          LIVE
+      <div className="absolute top-5 right-5 z-10 pointer-events-none drop-shadow-md">
+        <img src={logoUrl} alt="Lab Logo" className="h-10 opacity-80" />
+      </div>
+
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/90 to-transparent flex justify-between items-end p-5 transition-opacity duration-300">
+        <div className="flex items-center bg-red-600/90 px-2 py-1 rounded mb-1 backdrop-blur-sm">
+          {isPlaying && (
+            <div className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></div>
+          )}
+          <span className="text-white text-xs font-bold tracking-widest uppercase">
+            {isPlaying ? 'AO VIVO' : 'OFFLINE'}
+          </span>
         </div>
-      )}
+      </div>
     </div>
   );
 };
